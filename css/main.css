@@ -1,0 +1,30 @@
+.mx-6{
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+.bg-light {
+  background-color: #FFF0FD !important;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #FF85CE;
+  border-radius: 50rem !important;
+}
+
+.nav-pills .nav-item{
+  background-color: #AFFFF5;
+}
+
+h7{
+  color: purple;
+  font-weight: 700;
+  font-size: large;
+}
+
+.rounded-pill a.nav-link:hover, .rounded-pill a.nav-link:hover h7{
+  color: purple;
+  border-radius: 50rem !important;
+  background-color: #FDFD97;
+}
