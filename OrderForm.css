@@ -1,0 +1,78 @@
+body
+{
+  background-color: #FFE4E4;
+}
+
+.custInfo {
+    display: flex;
+    flex-direction: row;
+    border-radius: 0 0 5px 5px;
+    padding: 25px;
+  }
+
+.third
+  {
+      border:black;
+      background-color:#FF85CE;
+      color:black;
+  }
+
+label {
+    margin-bottom: 1px;
+  }
+
+.container {
+    background-color: #FFE4E4;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+  }
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    margin: 0 -16px;
+  }
+
+.row-1 {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap; 
+    flex-wrap: wrap;
+    margin: 0 -17px;
+  }
+ 
+.row-2 {
+    text-align: justify;
+    padding-left: 100px;
+  }  
+
+.col-1{ /* pastry type */
+    padding: 0 100px;
+    -ms-flex: 2%; 
+    flex: 2%;
+   
+}
+
+.col-2{ /* price */
+    padding: 0 95px;
+    -ms-flex: 2%; 
+    flex: 2%;
+  }
+
+.col-3{ /* quantity */
+    padding: 0 100px;
+    -ms-flex: 1.5%; 
+    flex: 1.5%;
+    
+  }
+
+.col-4{ /* flavor */
+    padding: 0 105px;
+    -ms-flex: 1.5%; 
+    flex: 1.5%;
+    
+  }
+
