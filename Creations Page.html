@@ -34,13 +34,21 @@
     /* Add padding BETWEEN each column */
     .row,
     .row > .column {
+
       padding: 9px;
+
+      padding: 8px;
+
     }
     
     /* Create three equal columns that floats next to each other */
     .column {
       float: left;
+
       width: 100%;
+
+      width: 33.33%;
+
       display: none; /* Hide all elements by default */
     }
     
@@ -67,7 +75,11 @@
       border: none;
       outline: none;
       padding: 12px 16px;
+
       background-color:  #AFFFF5;
+
+      background-color: white;
+
       cursor: pointer;
     }
     
@@ -76,8 +88,13 @@
     }
     
     .btn.active {
+
       background-color:  #FFE4E4;
       color:   #AFFFF5;
+
+      background-color: #666;
+      color: white;
+
     }
     </style>
     </head>
@@ -85,19 +102,29 @@
     
         <div class="main">
 
+
             <h1 style="font-family:Georgia, 'Times New Roman', Times, serif;"><center>LeSweet Goodies</center></h1>
+
+            <h1>LeSweet Goodies</h1>
+
             <hr>
             
             <div id="myBtnContainer">
               <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+
               <button class="btn" onclick="filterSelection('nature')"> Customized Cakes</button>
               <button class="btn" onclick="filterSelection('cars')"> Flavored Cakes</button>
+
+              <button class="btn" onclick="filterSelection('nature')"> Cakes</button>
+              <button class="btn" onclick="filterSelection('cars')"> Fondant Cakes</button>
+
               <button class="btn" onclick="filterSelection('people')"> Pastries</button>
             </div>
             
            
             <div class="row">
               <div class="column nature">
+
                   <div class="content">
                     <img src="minamalist7.jpg" alt="minimalist7" style="width:240px">
                     <img src="minimalist14.jpg" alt="minimalist14" style="width:240px">
@@ -186,10 +213,33 @@
             <h4><center>Number Cakes</center></h4>
         </div>
       </div>
+
+                <div class="content">
+                  <img src="minimalist10.jpg" alt="Minimalist" style="width:100%">
+                  <h4>Minimalist Cake</h4>
+                
+                </div>
+              </div>
+              <div class="column nature">
+                <div class="content">
+                <img src="floral2.jpg" alt="Floral" style="width:100%">
+                  <h4>Floral Cake</h4>
+                
+                </div>
+              </div>
+              <div class="column nature">
+                <div class="content">
+                <img src="boy7.jpg" alt="Boy" style="width:100%">
+                  <h4>6 Layer Cake</h4>
+                  
+                </div>
+              </div>
+
               
               
               <div class="column cars">
                 <div class="content">
+
                   <img src="cheesecake1.jpg" alt="cheesecake1" style="width:240px; height:320px;">
                   <img src="cheesecake2.jpg" alt="cheesecake2" style="width:240px; height:320px;">
                   <img src="cheesecake3.jpg" alt="cheesecake3" style="width:240px; height:320px;">
@@ -294,6 +344,65 @@
             
           </div>
         </div>
+       <img src="18bday4.jpg" alt="18thBirthday" style="width:100%">
+                  <h4>Painter Fondant </h4>
+                  
+                </div>
+              </div>
+              <div class="column cars">
+                <div class="content">
+                <img src="boy24.jpg" alt="Boy" style="width:100%">
+                  <h4>Fondant</h4>
+              
+                </div>
+              </div>
+              <div class="column cars">
+                <div class="content">
+                <img src="girl14.jpg" alt="Girl" style="width:100%">
+                  <h4>Unicorn</h4>
+                  
+                </div>
+              </div>
+            
+              <div class="column people">
+                <div class="content">
+                  <img src="cupcake18.jpg" alt="Cupcake" style="width:100%">
+                  <h4>Spiderman Cupcakes</h4>
+                  
+                </div>
+              </div>
+              <div class="column people">
+                <div class="content">
+                <img src="brownie4.jpg" alt="Brownie" style="width:100%">
+                  <h4>Red Velvet Brownie</h4>
+                  
+                </div>
+              </div>
+              <div class="column people">
+                <div class="content">
+                <img src="cookies5.jpg" alt="Car" style="width:100%">
+                  <h4>Chewy Chocolate Chunk Cookies</h4>
+                  
+                </div>
+              </div>
+
+              <div class="column people">
+                <div class="content">
+                <img src="cupcake12.jpg" alt="Cupcake" style="width:100%">
+                  <h4>Birthday Cupcake</h4>
+                  
+                </div>
+              </div>
+              <div class="column people">
+                <div class="content">
+                <img src="cheesecakecups1.jpg" alt="Cupcake" style="width:100%">
+                  <h4>Cheesecake Cupcakes</h4>
+                  
+                </div>
+              </div>
+            </div>
+            </div>
+
     
     <script>
     filterSelection("all")
@@ -339,8 +448,7 @@
         this.className += " active";
       });
     }
-    </script>
-
+</script>
 
 </body>
 </html>
