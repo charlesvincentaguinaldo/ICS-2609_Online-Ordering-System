@@ -34,13 +34,21 @@
     /* Add padding BETWEEN each column */
     .row,
     .row > .column {
+
+      padding: 9px;
+
       padding: 8px;
+
     }
     
     /* Create three equal columns that floats next to each other */
     .column {
       float: left;
+
+      width: 100%;
+
       width: 33.33%;
+
       display: none; /* Hide all elements by default */
     }
     
@@ -67,7 +75,11 @@
       border: none;
       outline: none;
       padding: 12px 16px;
+
+      background-color:  #AFFFF5;
+
       background-color: white;
+
       cursor: pointer;
     }
     
@@ -76,8 +88,13 @@
     }
     
     .btn.active {
+
+      background-color:  #FFE4E4;
+      color:   #AFFFF5;
+
       background-color: #666;
       color: white;
+
     }
     </style>
     </head>
@@ -85,19 +102,118 @@
     
         <div class="main">
 
+
+            <h1 style="font-family:Georgia, 'Times New Roman', Times, serif;"><center>LeSweet Goodies</center></h1>
+
             <h1>LeSweet Goodies</h1>
+
             <hr>
             
             <div id="myBtnContainer">
               <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+
+              <button class="btn" onclick="filterSelection('nature')"> Customized Cakes</button>
+              <button class="btn" onclick="filterSelection('cars')"> Flavored Cakes</button>
+
               <button class="btn" onclick="filterSelection('nature')"> Cakes</button>
               <button class="btn" onclick="filterSelection('cars')"> Fondant Cakes</button>
+
               <button class="btn" onclick="filterSelection('people')"> Pastries</button>
             </div>
             
            
             <div class="row">
               <div class="column nature">
+
+                  <div class="content">
+                    <img src="minamalist7.jpg" alt="minimalist7" style="width:240px">
+                    <img src="minimalist14.jpg" alt="minimalist14" style="width:240px">
+                    <img src="minimalist13.jpg" alt="minimalist13" style="width:240px">
+                    <img src="minamalist8.jpg" alt="minimalist8" style="width:240px; height:320px;">
+                    <h4><center>Minimalist Cakes</center></h4>
+                  </div>
+              </div>
+            
+              <div class="column nature">
+                  <div class="content">
+                    <img src="boy7.jpg" alt="boy7" style="width:240px">
+                    <img src="boy10.jpg" alt="boy10" style="width:240px">
+                    <img src="boy23.jpg" alt="boy23" style="width:240px">
+                    <img src="boy2.jpg" alt="boy2" style="width:240px">
+                    <h4><center>Birthday Cakes for Boys</center></h4>
+                    </div>
+              </div>
+
+              <div class="column nature">
+                  <div class="content">
+                    <img src="men6.jpg" alt="men6" style="width:240px; height:320px;">
+                    <img src="men5.jpg" alt="men5" style="width:240px; height:320px;">
+                    <img src="men7.jpg" alt="men7" style="width:240px">
+                    <img src="men4.jpg" alt="men4" style="width:240px; height:320px;">
+                    <h4><center>Birthday Cakes for Gentelmen</center></h4>
+                  </div>
+              </div>
+
+              <div class="column nature">
+                <div class="content">
+                  <img src="boy26.jpg" alt="boy26" style="width:240px">
+                  <img src="boy27.jpg" alt="boy27" style="width:240px">
+                  <img src="boy24.jpg" alt="boy24" style="width:240px; height:320px;">
+                  <img src="boy16.jpg" alt="boy16" style="width:240px; height:320px;">
+                  <h4><center>Fondant Cakes for Boys</center></h4>
+                </div>
+            </div>
+
+              <div class="column nature">
+                  <div class="content">
+                    <img src="lady3.jpg" alt="lady3" style="width:240px; height:320px;">
+                    <img src="floral1.jpg" alt="floral11" style="width:240px">
+                    <img src="floral7.jpg" alt="floral7" style="width:240px; height:320px;">
+                    <img src="lady6.jpg" alt="lady6" style="width:240px; height:320px;">
+                    <h4><center>Birthday Cakes for Ladies</center></h4>
+                </div>
+              </div>
+
+              <div class="column nature">
+                <div class="content">
+                  <img src="girl2.jpg" alt="girl2" style="width:240px">
+                  <img src="girl25.jpg" alt="girl25" style="width:240px">
+                  <img src="girl26.jpg" alt="girl26" style="width:240px; height:320px;">
+                  <img src="girl21.jpg" alt="girl21" style="width:240px">
+                  <h4><center>Birthday Cakes for Girls</center></h4>
+              </div>
+            </div>
+
+            <div class="column nature">
+              <div class="content">
+                <img src="girl14.jpg" alt="girl14" style="width:240px; height:320px;">
+                <img src="girl18.jpg" alt="girl18" style="width:240px; height:320px;">
+                <img src="girl17.jpg" alt="girl17" style="width:240px; height:320px;">
+                <img src="girl6.jpg" alt="girl6" style="width:240px; height:320px;">
+                <h4><center>Fondant Cakes for Girls</center></h4>
+            </div>
+          </div>
+
+          <div class="column nature">
+            <div class="content">
+              <img src="18bday15.jpg" alt="18bday15" style="width:240px; height:320px;">
+              <img src="18bday4.jpg" alt="18bday4" style="width:240px">
+              <img src="18bday16.jpg" alt="18bday16" style="width:240px">
+              <img src="18bday9.jpg" alt="18bday9" style="width:240px;height:320px;">
+              <h4><center>Debut Cakes</center></h4>
+          </div>
+        </div>
+
+        <div class="column nature">
+          <div class="content">
+            <img src="numbercake12.jpg" alt="numbercake12" style="width:240px; height:320px;">
+            <img src="numbercake11.jpg" alt="numbercake11" style="width:240px; height:320px;">
+            <img src="numbercake10.jpg" alt="numbercake10" style="width:240px">
+            <img src="numbercake9.jpg" alt="numbercake9" style="width:240px">
+            <h4><center>Number Cakes</center></h4>
+        </div>
+      </div>
+
                 <div class="content">
                   <img src="minimalist10.jpg" alt="Minimalist" style="width:100%">
                   <h4>Minimalist Cake</h4>
@@ -118,11 +234,117 @@
                   
                 </div>
               </div>
+
               
               
               <div class="column cars">
                 <div class="content">
-                  <img src="18bday4.jpg" alt="18thBirthday" style="width:100%">
+
+                  <img src="cheesecake1.jpg" alt="cheesecake1" style="width:240px; height:320px;">
+                  <img src="cheesecake2.jpg" alt="cheesecake2" style="width:240px; height:320px;">
+                  <img src="cheesecake3.jpg" alt="cheesecake3" style="width:240px; height:320px;">
+                  <img src="cheesecake6.jpg" alt="cheesecake6" style="width:240px; height:320px;">
+                  <h4><center>Cheesecakes</center></h4>  
+                </div>
+              </div>
+
+              <div class="column cars">
+                  <div class="content">
+                    <img src="mango2.jpg" alt="mango2" style="width:240px">
+                    <img src="mango3.jpg" alt="mango3" style="width:240px; height:320px;">
+                    <img src="mango5.jpg" alt="mango5" style="width:240px">
+                    <img src="mango4.jpg" alt="mango4" style="width:240px">
+                    <h4><center>Mango Cream Cake</center></h4> 
+                </div>
+              </div>
+
+              <div class="column cars">
+                <div class="content">
+                <img src="ube5.jpg" alt="ube5" style="width:240px">
+                <img src="ube6.jpg" alt="ube6" style="width:240px">
+                <img src="ube3.jpg" alt="ube3" style="width:240px">
+                <img src="ube4.jpg" alt="ube4" style="width:240px; height:320px;">
+                  <h4><center>Ube Moist Cake with Homemade Ube Jam</center></h4>
+                </div>
+              </div>
+
+              <div class="column cars">
+                <div class="content">
+                  <center>
+                    <img src="tiramisu1.jpg" alt="tiramisu1" style="width:240px; height:320px;">
+                    <img src="tiramisu3.jpg" alt="tiramisu3" style="width:240px; height:320px;">
+                    <img src="tiramisu4.jpg" alt="tiramisu4" style="width:240px">
+                   
+                  </center>
+                  <h4><center>Tiramisu</center></h4>
+                </div>
+              </div>
+
+              <div class="column cars">
+                <div class="content">
+                <img src="redvelvet4.jpg" alt="redvelvet4" style="width:240px; height:320px;">
+                <img src="redvelvet2.jpg" alt="redvelvet2" style="width:240px; height:320px;">
+                <img src="redvelvet3.jpg" alt="redvelvet3" style="width:240px; height:320px;">
+                <img src="redvelvet5.jpg" alt="redvelvet5" style="width:240px; height:320px;">
+                  <h4><center>Red Velvet with Creamcheese Frosting</center></h4>
+                </div>
+              </div>
+
+              <div class="column cars">
+                <div class="content">
+                <img src="cookiesncream.jpg" alt="cookiesandcream" style="width:240px; height:320px;">
+                <img src="dulce1.jpg" alt="dulce1" style="width:240px; height:320px;">
+                <img src="dulce3.jpg" alt="dulce3" style="width:240px; height:320px;">
+                <img src="putocake2.jpg" alt="putocake2" style="width:240px; height:320px;">
+                  <h4><center>Other Flavored Cakes</center></h4>
+                </div>
+              </div>
+            
+              <div class="column people">
+                <div class="content">
+                  <img src="cupcake18.jpg" alt="cupcake18" style="width:240px">
+                  <img src="cheesecakecup3.jpg" alt="cheesecakecup3" style="width:240px">
+                  <img src="cupcake12.jpg" alt="cupcake12" style="width:240px">
+                  <img src="cupcake16.jpg" alt="cupcake16" style="width:240px">
+                  <h4><center>Cupcakes</center></h4>
+                </div>
+              </div>
+
+              <div class="column people">
+                <div class="content">
+                  <img src="brownie4.jpg" alt="brownie4" style="width:240px; height:200px;">
+                  <img src="brownie1.jpg" alt="brownie1" style="width:240px; height:200px;">
+                  <img src="brownie3.jpg" alt="brownie3" style="width:240px; height:200px;">
+                  <img src="brownie2.jpg" alt="brownie2" style="width:240px; height:200px;">
+                  <h4><center>Brownies</center></h4>
+                  
+                </div>
+              </div>
+              <div class="column people">
+                <div class="content">
+                <img src="cookies5.jpg" alt="cookies5" style="width:240px">
+                <img src="cookies1.jpg" alt="cookies1" style="width:240px">
+                <img src="cookies2.jpg" alt="cookies2" style="width:240px">
+                <img src="cookies3.jpg" alt="cookies3" style="width:240px">
+                <h4><center>Chewy Chocolate Chunk Cookies and Palm Size Smores Cookies</center></h4>
+                  
+                </div>
+              </div>
+
+              <div class="column people">
+                <div class="content">
+                  <center>
+                    <img src="banana1.jpg" alt="banana1" style="width:240px; height:320px;">
+                    <img src="banana2.jpg" alt="banana2" style="width:240px; height:320px;">
+                  </center>
+                  <h4><center>Banana Cake</center></h4>
+                  
+                </div>
+              </div>
+            
+          </div>
+        </div>
+       <img src="18bday4.jpg" alt="18thBirthday" style="width:100%">
                   <h4>Painter Fondant </h4>
                   
                 </div>
@@ -180,6 +402,7 @@
               </div>
             </div>
             </div>
+
     
     <script>
     filterSelection("all")
@@ -225,8 +448,7 @@
         this.className += " active";
       });
     }
-    </script>
-
+</script>
 
 </body>
 </html>
