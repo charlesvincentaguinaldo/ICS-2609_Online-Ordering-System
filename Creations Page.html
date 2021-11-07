@@ -1,97 +1,454 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title> Creations </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creations Page</title>
+  
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    body
+            {
+            background-image: url('Pink Spark.gif');
+            }
+    
+    /* Center website */
+    .main {
+      max-width: 1000px;
+      margin: auto;
+    }
+    
+    h1 {
+      font-size: 50px;
+      word-break: break-all;
+    }
+    
+    .row {
+      margin: 10px -16px;
+    }
+    
+    /* Add padding BETWEEN each column */
+    .row,
+    .row > .column {
 
-<style>
-body {
-  font-family: 'Times New Roman', Times, serif;
-  background-color: rgba(255, 197, 197, 0.432);
-}
+      padding: 9px;
 
-.navbar {
-  overflow: hidden;
-  background-color: #a6ffff;
-}
+      padding: 8px;
 
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color:  rgb(0, 0, 0);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+    }
+    
+    /* Create three equal columns that floats next to each other */
+    .column {
+      float: left;
 
-.dropdown {
-  float: left;
-  overflow: hidden;
-}
+      width: 100%;
 
-.dropdown .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: rgb(2, 2, 2);
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
+      width: 33.33%;
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: rgb(253, 175, 253);
-}
+      display: none; /* Hide all elements by default */
+    }
+    
+    /* Clear floats after rows */ 
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    
+    /* Content */
+    .content {
+      background-color: white;
+      padding: 10px;
+    }
+    
+    /* The "show" class is added to the filtered elements */
+    .show {
+      display: block;
+    }
+    
+    /* Style the buttons */
+    .btn {
+      border: none;
+      outline: none;
+      padding: 12px 16px;
 
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
+      background-color:  #AFFFF5;
 
-.dropdown-content a {
-  float: none;
-  color: rgb(0, 0, 0);
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
+      background-color: white;
 
-.dropdown-content a:hover {
-  background-color: rgb(255, 226, 226);
-}
+      cursor: pointer;
+    }
+    
+    .btn:hover {
+      background-color: #ddd;
+    }
+    
+    .btn.active {
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-</style>
-</head>
-<body>
-<b>
-<div class="navbar">
-  <a href="#home">Home</a>
-  <a href="#orderform">Order Form</a>
-  <div class="dropdown">
-    <button class="dropbtn"> Creations
-      <i class="fa fa-caret-down"></i> </b>
-    </button>
-    <div class="dropdown-content">
-      <a href="Cakes.html">Cakes</a>
-      <a href="Cookies.html">Cookies</a>
-      <a href="Cupcakes.html">Cupcakes</a>
-      <a href="Pastries.html">Pastries</a>
-      <a href="Others.html">Others</a>
-    </div>
-  </div> 
-</div>
+      background-color:  #FFE4E4;
+      color:   #AFFFF5;
 
-<h3>LeSweet Goodies and Pastries Creations </h3>
-<p>These treats lets you experience what Calaca, Batangas is all about. <br> With its flavorful and delightful taste, these Cakes and Pastries have been the talk of the town</p>
+      background-color: #666;
+      color: white;
+
+    }
+    </style>
+    </head>
+    <body>
+    
+        <div class="main">
+
+
+            <h1 style="font-family:Georgia, 'Times New Roman', Times, serif;"><center>LeSweet Goodies</center></h1>
+
+            <h1>LeSweet Goodies</h1>
+
+            <hr>
+            
+            <div id="myBtnContainer">
+              <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+
+              <button class="btn" onclick="filterSelection('nature')"> Customized Cakes</button>
+              <button class="btn" onclick="filterSelection('cars')"> Flavored Cakes</button>
+
+              <button class="btn" onclick="filterSelection('nature')"> Cakes</button>
+              <button class="btn" onclick="filterSelection('cars')"> Fondant Cakes</button>
+
+              <button class="btn" onclick="filterSelection('people')"> Pastries</button>
+            </div>
+            
+           
+            <div class="row">
+              <div class="column nature">
+
+                  <div class="content">
+                    <img src="minamalist7.jpg" alt="minimalist7" style="width:240px">
+                    <img src="minimalist14.jpg" alt="minimalist14" style="width:240px">
+                    <img src="minimalist13.jpg" alt="minimalist13" style="width:240px">
+                    <img src="minamalist8.jpg" alt="minimalist8" style="width:240px; height:320px;">
+                    <h4><center>Minimalist Cakes</center></h4>
+                  </div>
+              </div>
+            
+              <div class="column nature">
+                  <div class="content">
+                    <img src="boy7.jpg" alt="boy7" style="width:240px">
+                    <img src="boy10.jpg" alt="boy10" style="width:240px">
+                    <img src="boy23.jpg" alt="boy23" style="width:240px">
+                    <img src="boy2.jpg" alt="boy2" style="width:240px">
+                    <h4><center>Birthday Cakes for Boys</center></h4>
+                    </div>
+              </div>
+
+              <div class="column nature">
+                  <div class="content">
+                    <img src="men6.jpg" alt="men6" style="width:240px; height:320px;">
+                    <img src="men5.jpg" alt="men5" style="width:240px; height:320px;">
+                    <img src="men7.jpg" alt="men7" style="width:240px">
+                    <img src="men4.jpg" alt="men4" style="width:240px; height:320px;">
+                    <h4><center>Birthday Cakes for Gentelmen</center></h4>
+                  </div>
+              </div>
+
+              <div class="column nature">
+                <div class="content">
+                  <img src="boy26.jpg" alt="boy26" style="width:240px">
+                  <img src="boy27.jpg" alt="boy27" style="width:240px">
+                  <img src="boy24.jpg" alt="boy24" style="width:240px; height:320px;">
+                  <img src="boy16.jpg" alt="boy16" style="width:240px; height:320px;">
+                  <h4><center>Fondant Cakes for Boys</center></h4>
+                </div>
+            </div>
+
+              <div class="column nature">
+                  <div class="content">
+                    <img src="lady3.jpg" alt="lady3" style="width:240px; height:320px;">
+                    <img src="floral1.jpg" alt="floral11" style="width:240px">
+                    <img src="floral7.jpg" alt="floral7" style="width:240px; height:320px;">
+                    <img src="lady6.jpg" alt="lady6" style="width:240px; height:320px;">
+                    <h4><center>Birthday Cakes for Ladies</center></h4>
+                </div>
+              </div>
+
+              <div class="column nature">
+                <div class="content">
+                  <img src="girl2.jpg" alt="girl2" style="width:240px">
+                  <img src="girl25.jpg" alt="girl25" style="width:240px">
+                  <img src="girl26.jpg" alt="girl26" style="width:240px; height:320px;">
+                  <img src="girl21.jpg" alt="girl21" style="width:240px">
+                  <h4><center>Birthday Cakes for Girls</center></h4>
+              </div>
+            </div>
+
+            <div class="column nature">
+              <div class="content">
+                <img src="girl14.jpg" alt="girl14" style="width:240px; height:320px;">
+                <img src="girl18.jpg" alt="girl18" style="width:240px; height:320px;">
+                <img src="girl17.jpg" alt="girl17" style="width:240px; height:320px;">
+                <img src="girl6.jpg" alt="girl6" style="width:240px; height:320px;">
+                <h4><center>Fondant Cakes for Girls</center></h4>
+            </div>
+          </div>
+
+          <div class="column nature">
+            <div class="content">
+              <img src="18bday15.jpg" alt="18bday15" style="width:240px; height:320px;">
+              <img src="18bday4.jpg" alt="18bday4" style="width:240px">
+              <img src="18bday16.jpg" alt="18bday16" style="width:240px">
+              <img src="18bday9.jpg" alt="18bday9" style="width:240px;height:320px;">
+              <h4><center>Debut Cakes</center></h4>
+          </div>
+        </div>
+
+        <div class="column nature">
+          <div class="content">
+            <img src="numbercake12.jpg" alt="numbercake12" style="width:240px; height:320px;">
+            <img src="numbercake11.jpg" alt="numbercake11" style="width:240px; height:320px;">
+            <img src="numbercake10.jpg" alt="numbercake10" style="width:240px">
+            <img src="numbercake9.jpg" alt="numbercake9" style="width:240px">
+            <h4><center>Number Cakes</center></h4>
+        </div>
+      </div>
+
+                <div class="content">
+                  <img src="minimalist10.jpg" alt="Minimalist" style="width:100%">
+                  <h4>Minimalist Cake</h4>
+                
+                </div>
+              </div>
+              <div class="column nature">
+                <div class="content">
+                <img src="floral2.jpg" alt="Floral" style="width:100%">
+                  <h4>Floral Cake</h4>
+                
+                </div>
+              </div>
+              <div class="column nature">
+                <div class="content">
+                <img src="boy7.jpg" alt="Boy" style="width:100%">
+                  <h4>6 Layer Cake</h4>
+                  
+                </div>
+              </div>
+
+              
+              
+              <div class="column cars">
+                <div class="content">
+
+                  <img src="cheesecake1.jpg" alt="cheesecake1" style="width:240px; height:320px;">
+                  <img src="cheesecake2.jpg" alt="cheesecake2" style="width:240px; height:320px;">
+                  <img src="cheesecake3.jpg" alt="cheesecake3" style="width:240px; height:320px;">
+                  <img src="cheesecake6.jpg" alt="cheesecake6" style="width:240px; height:320px;">
+                  <h4><center>Cheesecakes</center></h4>  
+                </div>
+              </div>
+
+              <div class="column cars">
+                  <div class="content">
+                    <img src="mango2.jpg" alt="mango2" style="width:240px">
+                    <img src="mango3.jpg" alt="mango3" style="width:240px; height:320px;">
+                    <img src="mango5.jpg" alt="mango5" style="width:240px">
+                    <img src="mango4.jpg" alt="mango4" style="width:240px">
+                    <h4><center>Mango Cream Cake</center></h4> 
+                </div>
+              </div>
+
+              <div class="column cars">
+                <div class="content">
+                <img src="ube5.jpg" alt="ube5" style="width:240px">
+                <img src="ube6.jpg" alt="ube6" style="width:240px">
+                <img src="ube3.jpg" alt="ube3" style="width:240px">
+                <img src="ube4.jpg" alt="ube4" style="width:240px; height:320px;">
+                  <h4><center>Ube Moist Cake with Homemade Ube Jam</center></h4>
+                </div>
+              </div>
+
+              <div class="column cars">
+                <div class="content">
+                  <center>
+                    <img src="tiramisu1.jpg" alt="tiramisu1" style="width:240px; height:320px;">
+                    <img src="tiramisu3.jpg" alt="tiramisu3" style="width:240px; height:320px;">
+                    <img src="tiramisu4.jpg" alt="tiramisu4" style="width:240px">
+                   
+                  </center>
+                  <h4><center>Tiramisu</center></h4>
+                </div>
+              </div>
+
+              <div class="column cars">
+                <div class="content">
+                <img src="redvelvet4.jpg" alt="redvelvet4" style="width:240px; height:320px;">
+                <img src="redvelvet2.jpg" alt="redvelvet2" style="width:240px; height:320px;">
+                <img src="redvelvet3.jpg" alt="redvelvet3" style="width:240px; height:320px;">
+                <img src="redvelvet5.jpg" alt="redvelvet5" style="width:240px; height:320px;">
+                  <h4><center>Red Velvet with Creamcheese Frosting</center></h4>
+                </div>
+              </div>
+
+              <div class="column cars">
+                <div class="content">
+                <img src="cookiesncream.jpg" alt="cookiesandcream" style="width:240px; height:320px;">
+                <img src="dulce1.jpg" alt="dulce1" style="width:240px; height:320px;">
+                <img src="dulce3.jpg" alt="dulce3" style="width:240px; height:320px;">
+                <img src="putocake2.jpg" alt="putocake2" style="width:240px; height:320px;">
+                  <h4><center>Other Flavored Cakes</center></h4>
+                </div>
+              </div>
+            
+              <div class="column people">
+                <div class="content">
+                  <img src="cupcake18.jpg" alt="cupcake18" style="width:240px">
+                  <img src="cheesecakecup3.jpg" alt="cheesecakecup3" style="width:240px">
+                  <img src="cupcake12.jpg" alt="cupcake12" style="width:240px">
+                  <img src="cupcake16.jpg" alt="cupcake16" style="width:240px">
+                  <h4><center>Cupcakes</center></h4>
+                </div>
+              </div>
+
+              <div class="column people">
+                <div class="content">
+                  <img src="brownie4.jpg" alt="brownie4" style="width:240px; height:200px;">
+                  <img src="brownie1.jpg" alt="brownie1" style="width:240px; height:200px;">
+                  <img src="brownie3.jpg" alt="brownie3" style="width:240px; height:200px;">
+                  <img src="brownie2.jpg" alt="brownie2" style="width:240px; height:200px;">
+                  <h4><center>Brownies</center></h4>
+                  
+                </div>
+              </div>
+              <div class="column people">
+                <div class="content">
+                <img src="cookies5.jpg" alt="cookies5" style="width:240px">
+                <img src="cookies1.jpg" alt="cookies1" style="width:240px">
+                <img src="cookies2.jpg" alt="cookies2" style="width:240px">
+                <img src="cookies3.jpg" alt="cookies3" style="width:240px">
+                <h4><center>Chewy Chocolate Chunk Cookies and Palm Size Smores Cookies</center></h4>
+                  
+                </div>
+              </div>
+
+              <div class="column people">
+                <div class="content">
+                  <center>
+                    <img src="banana1.jpg" alt="banana1" style="width:240px; height:320px;">
+                    <img src="banana2.jpg" alt="banana2" style="width:240px; height:320px;">
+                  </center>
+                  <h4><center>Banana Cake</center></h4>
+                  
+                </div>
+              </div>
+            
+          </div>
+        </div>
+       <img src="18bday4.jpg" alt="18thBirthday" style="width:100%">
+                  <h4>Painter Fondant </h4>
+                  
+                </div>
+              </div>
+              <div class="column cars">
+                <div class="content">
+                <img src="boy24.jpg" alt="Boy" style="width:100%">
+                  <h4>Fondant</h4>
+              
+                </div>
+              </div>
+              <div class="column cars">
+                <div class="content">
+                <img src="girl14.jpg" alt="Girl" style="width:100%">
+                  <h4>Unicorn</h4>
+                  
+                </div>
+              </div>
+            
+              <div class="column people">
+                <div class="content">
+                  <img src="cupcake18.jpg" alt="Cupcake" style="width:100%">
+                  <h4>Spiderman Cupcakes</h4>
+                  
+                </div>
+              </div>
+              <div class="column people">
+                <div class="content">
+                <img src="brownie4.jpg" alt="Brownie" style="width:100%">
+                  <h4>Red Velvet Brownie</h4>
+                  
+                </div>
+              </div>
+              <div class="column people">
+                <div class="content">
+                <img src="cookies5.jpg" alt="Car" style="width:100%">
+                  <h4>Chewy Chocolate Chunk Cookies</h4>
+                  
+                </div>
+              </div>
+
+              <div class="column people">
+                <div class="content">
+                <img src="cupcake12.jpg" alt="Cupcake" style="width:100%">
+                  <h4>Birthday Cupcake</h4>
+                  
+                </div>
+              </div>
+              <div class="column people">
+                <div class="content">
+                <img src="cheesecakecups1.jpg" alt="Cupcake" style="width:100%">
+                  <h4>Cheesecake Cupcakes</h4>
+                  
+                </div>
+              </div>
+            </div>
+            </div>
+
+    
+    <script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("column");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    
+    
+    var btnContainer = document.getElementById("myBtnContainer");
+    var btns = btnContainer.getElementsByClassName("btn");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+</script>
 
 </body>
 </html>
