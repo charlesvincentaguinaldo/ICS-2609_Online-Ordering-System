@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <script src="js/checkbox.js"></script>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="images/head icon.png">
+	<link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+    <!-- jQuery and plugins --> 
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script> 
+    <script src="js/bootstrap-4.3.1.js"></script>
+</head>
+<body>
+<!--Nav Bar-->
+<body style="background-color: #FFF0FD;">
+<div class="order-form-bg">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4 shift">
+        <a class="navbar-brand d-lg-none" href="index.html"><img src="images/navbar logo.png" alt="LeSweet logo" style="width: 150px"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarToggle">
+          <ul class="nav">
+            <li class="nav-item mx-6">
+              <a class="nav-link active" href="index.html"><h7>HOME</h7></a>
+            </li>
+            <li class="nav-item mx-6">
+              <a class="nav-link" href="Creations Page.html"><h7>CREATIONS</h7></a>
+            </li>
+          </ul>
+          <a class="navbar-brand d-none d-lg-block" href="index.html"><img src="images/navbar logo.png" alt="LeSweet logo" style="width: 156px; margin-left: 4rem; margin-right: 1rem;" style="background-color: #FFF0FD;"></a>
+          <ul class="nav ml-2">
+            <li class="nav-item mx-6">
+              <a class="nav-link" href="AboutUs.html"><h7>ABOUT US</h7></a>
+            </li>
+            <li class="nav-item mx-6">
+              <a class="nav-link" href="orderFormfinal.html"><h7>ORDER NOW</h7></a>
+            </li>
+          </ul>
+        </div>
+  </nav>
+<!--Order Form Starts-->
+<form action ="/details" method="POST" id="orderform" style="position: relative;">
+    <fieldset class="mx-4 fieldset-proper">
+        <legend class="legend-center"><custom-font>Order Details</custom-font></legend>
+        <div class="container-fluid p-1">
+        <div class="row justify-content-around">
+            <div class= "col-6">           
+                <h4 style="text-align:center;color:red;font-size:25px;font-style: italic;">Best Sellers</h4>
+            </div>
+            <div class ="col-6">
+                <h4 style="text-align:center;color:royalblue;font-size:25px;font-style: italic;">Recommended by the Baker</h4>
+            </div>     
+        </div>
+        <!--PASTRIES-->
+        <h3 class="third">PASTRIES</h3>
+        <div class="row justify-content-around">
+            <div class= "col-5">
+                <h5 style="font-weight:bold;">Cookies</h5>
+            </div>
+            <div class ="col-1">
+                <h5 style="font-weight:bold;">Price</h5>
+            </div>
+            <div class= "col-1">
+                <h5 style="font-weight:bold;">Quantity</h5>
+            </div>     
+        </div>
+        <div class="row justify-content-around" id="PSSC"><!--palm size smores cookies-->
+            <div class= "col-5">
+                <input type="checkbox" class="ch" id="1"onclick="enableQuantity('PSSC');"/>
+                <label for = "1"> Palm Size Smores Cookies </label>
+                <i class="fa fa-cloud" style="color:royalblue;"></i><!--need icon-->
+            </div>
+            <div class ="col-1">
+                <input type="number" name="price" value="65.00" readonly style="border: 0; background-color:#FFF0FD;">
+            </div>
+            <div class= "col-1">
+                <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
+            </div>
+        </div>
+        <div class="row justify-content-around" id="CCCC"><!--chewy chocolate chunk cookies-->
+            <div class= "col-5">
+                <input type="checkbox" class="ch" id="2" onclick="enableQuantity('CCCC');"/>
+                <label for = "2"> Chewy Chocolate Chunk Cookies (8pcs) </label>
+                <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
+            </div>
+            <div class ="col-1">
+                <input type="number" name="price" value="285.00" readonly style="border: 0; background-color:#FFF0FD;">
+            </div>
+            <div class= "col-1">
+                <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
+            </div>
+        </div>
+        <div class="row justify-content-around">
+            <div class= "col-5">
+                <h5 style="font-weight:bold;">Brownies</h5>
+            </div>
+            <div class ="col-1">
+                <h5 style="font-weight:bold;display: none;">Price</h5>
+            </div>
+            <div class= "col-1">
+                <h5 style="font-weight:bold;display: none;">Quantity</h5>
+            </div>     
+        </div>
+        <div class="row justify-content-around" id="RVCB"><!--Red Velvet with Creamcheese Brownies-->
+            <div class= "col-5">
+                <input type="checkbox" class="ch" id="3" onclick="enableQuantity('RVCB');"/>
+                <label for = "3"> Red Velvet with Creamcheese Brownies </label>
+                <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
+            </div>
+            <div class ="col-1">
+                <input type="number" name="price" value="160.00" readonly style="border: 0; background-color:#FFF0FD;">
+            </div>
+            <div class= "col-1">
+                <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
+            </div>
+        </div>
+        <div class="row justify-content-around" id="ChoB"><!--Chocolate Brownies-->
+            <div class= "col-5">
+                <input type="checkbox" class="ch" id="4" onclick="enableQuantity('ChoB');"/>
+                <label for = "4"> Chocolate Brownies </label>
+                <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
+            </div>
+            <div class ="col-1">
+                <input type="number" name="price" value="150.00" readonly style="border: 0; background-color:#FFF0FD;">
+            </div>
+            <div class= "col-1">
+                <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
+            </div>
+        </div>
+        <div class="row justify-content-around" id="CarB"><!--Caramel Brownies-->
+            <div class= "col-5">
+                <input type="checkbox" class="ch" id="5" onclick="enableQuantity('CarB');"/>
+                <label for = "5"> Caramel Brownies </label>
+                <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
+            </div>
+            <div class ="col-1">
+                <input type="number" name="price" value="150.00" readonly style="border: 0; background-color:#FFF0FD;">
+            </div>
+            <div class= "col-1">
+                <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
+            </div>
+        </div>
+        <div class="row justify-content-around">
+            <div class= "col-5">
+                <h5 style="font-weight:bold;">Cupcakes (6pcs per order)</h5>
+            </div>
+            <div class ="col-1">
+                <h5 style="font-weight:bold;display: none;">Price</h5>
+            </div>
+            <div class= "col-1">
+                <h5 style="font-weight:bold;display: none;">Quantity</h5>
+            </div>     
+        </div>
+        <div class="row justify-content-around" id="RVCC"><!--Red Velvet with Creamcheese cupcake (6pcs)-->
+            <div class= "col-5">
+                <input type="checkbox" class="ch" id="6" onclick="enableQuantity('RVCC');"/>
+                <label for = "6"> Red Velvet with Creamcheese Cupcake (6pcs) </label>
+                <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
+            </div>
+            <div class ="col-1">
+                <input type="number" name="price" value="360.00" readonly style="border: 0; background-color:#FFF0FD;">
+            </div>
+            <div class= "col-1">
+                <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
+            </div>
+        </div>
+        <div class="row justify-content-around" id="ChoC"><!--Chocolate Cupcake (6pcs)-->
+            <div class= "col-5">
+                <input type="checkbox" class="ch" id="7" onclick="enableQuantity('ChoC');"/>
+                <label for = "7"> Chocolate Cupcake (6pcs) </label>
+                <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
+            </div>
+            <div class ="col-1">
+                <input type="number" name="price" value="320.00" readonly style="border: 0; background-color:#FFF0FD;">
+            </div>
+            <div class= "col-1">
+                <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
+            </div>
+        </div>
+        <h3 class="third">CAKES</h3>
+        <div class="row justify-content-around" id="RVCF"><!--Red Velvet with Creamcheese Frosting-->
+            <div class= "col-5">
+                <input type="checkbox" class="ch" name="RVCF" onclick="enableQuantity('RVCF');"/>
+                <label for = "RVCF"> Red Velvet with Creamcheese Frosting </label>
+                <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
+            </div>
+            <div class ="col-1">
+                <select id="RVCF-size" form="orderform">
+                    <option disabled selected>Select Size</option>
+                    <option value="8">Regular Size - P850.00</option>
+                    <option value="9">Junior Size - P500.00</option>
+                </select> 
+            </div>
+            <div class= "col-1">
+                <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
+            </div>
+        </div>
+        <div class="row justify-content-around" id="ChoCake"><!--Chocomoist Cake-->
+            <div class= "col-5">
+                <input type="checkbox" class="ch" name="CCake" onclick="enableQuantity('ChoCake');"/>
+                <label for = "CCake"> Chocomoist Cake </label>
+                <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
+            </div>
+            <div class ="col-1">
+                <select id="CCake-size" form="orderform">
+                    <option disabled selected>Select Size</option>
+                    <option value="10">Regular Size - P700.00</option>
+                    <option value="11">Junior Size - P400.00</option>
+                </select> 
+            </div>
+            <div class= "col-1">
+                <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
+            </div>
+        </div>
+        <div class="row justify-content-around" id="UMC"><!--Ube Moist Cake with Homemade Ube Jam-->
+            <div class= "col-5">
+                <input type="checkbox" class="ch" name="UMCH" onclick="enableQuantity('UMC');"/>
+                <label for = "UMCH"> Ube Moist Cake with Homemade Ube Jam </label>
+                <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
+            </div>
+            <div class ="col-1">
+                <select id="UMCH-size" form="orderform">
+                    <option disabled selected>Select Size</option>
+                    <option value="12">Regular Size - P650.00</option>
+                    <option value="13">Junior Size - P350.00</option>
+                </select> 
+            </div>
+            <div class= "col-1">
+                <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
+            </div>
+        </div>
+        <div class="row justify-content-around" id="MCC"><!--Mango Cream Cake-->
+            <div class= "col-5">
+                <input type="checkbox" class="ch" name="MCCake" onclick="enableQuantity('MCC');"/>
+                <label for = "MCCake"> Mango Cream Cake </label>
+                <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
+            </div>
+            <div class ="col-1">
+                <select id="MCCake-size" form="orderform">
+                    <option disabled selected>Select Size</option>
+                    <option value="14">Regular Size - P650.00</option>
+                    <option value="15">Junior Size - P350.00</option>
+                </select> 
+            </div>
+            <div class= "col-1">
+                <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
+            </div>
+        </div>
+        <h3 class="third">CHEESECAKES</h3>
+        <div class="row justify-content-around" id="BC"><!--Blueberry Cheesecake-->
+            <div class= "col-5">
+                <input type="checkbox" class="ch" name="BCCake" onclick="enableQuantity('BC');"/>
+                <label for = "BCCake"> Blueberry Cheesecake </label>
+                <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
+            </div>
+            <div class ="col-1">
+                <select id="BCCake-size" form="orderform">
+                    <option disabled selected>Select Size</option>
+                    <option value="16">Regular Size - P850.00</option>
+                    <option value="17">Junior Size - P500.00</option>
+                </select> 
+            </div>
+            <div class= "col-1">
+                <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
+            </div>
+        </div>
+        <div class="row justify-content-around" id="OC"><!--Oreo Cheesecake-->
+            <div class= "col-5">
+                <input type="checkbox" class="ch" name="OCCake" onclick="enableQuantity('OC');"/>
+                <label for = "OCCake"> Oreo Cheesecake </label>
+                <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
+            </div>
+            <div class ="col-1">
+                <select id="OCCake-size" form="orderform">
+                    <option disabled selected>Select Size</option>
+                    <option value="18">Regular Size - P850.00</option>
+                    <option value="19">Junior Size - P500.00</option>
+                </select> 
+            </div>
+            <div class= "col-1">
+                <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
+            </div>
+        </div>
+        </div>
+    </fieldset>
+    <fieldset class="mx-4 mt-4 fieldset-proper">
+        <legend class="legend-center"><custom-font>Customer Details</custom-font></legend>
+        <div class="container-fluid p-1">
+            <div class="row justify-content-center px-5">
+                <div class="col- px-3">
+                    <label for="Name">
+                         Name:
+                    </label>
+                     <input type="text" name="fname" id="fname" placeholder="First Name" required>
+                    <input type="text" name="lname" id="lname" placeholder="Last Name"  required>
+                </div>
+                <div class="col- px-3">
+                    <label for="Contact Number"> 
+                         Contact Number:
+                    </label>
+                    <input type="text" name="Contact-No" id="contactNum" placeholder="0912345678" minlength=11 required>
+                </div>
+                <div class="col- px-3">
+                    <label for="Email Address"> 
+                        Email Address:
+                    <input type="text" name ="email "id="emailAdd" placeholder="customer@gmail.com" required>
+                    </label>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col- px-3">
+                    <label>
+                        Facebook Account:
+                    </label>
+                         <input type="text" name="facebook" id="fbAcc" placeholder="Facebook Account" required>
+                </div>
+                <div class="col- px-3">
+                    <label>Delivery or Pick Up Date: 
+                        <input type="date" name= "date"
+                        autocomplete="off"
+                        min="2021-10-13"
+                        max="2099-12-31"
+                        required>
+                    </label>
+                </div>
+                <div class="col- px-3">
+                    <label>
+                        Delivery Option:
+                        <select id="delopt" required>
+                            <option>Delivery</option>
+                            <option>Pick-up</o<ption>    
+                        </select>
+                      </label>
+                </div>
+                <div class="col- px-3">
+                    <label>
+                        Mode of Payment:
+                        <select id="payment" required>
+                             <option>Cash on Delivery</option>
+                             <option>G-Cash</o<ption>
+                             <option>Bank Transfer</option>
+                         </select>
+                    </label>
+                </div>
+                <div class="col- px-3">
+                    <label>
+                        Time:
+                        <input type="time" name= "date"
+                                    autocomplete="off"
+                                    min="00:00"
+                                    max="00:00"
+                                    required>
+                    </label>
+                </div>
+            </div>
+            <div class="row justify-content-center pt-3">
+                <div class="col-">
+                    <button type="submit" onclick="validation();">Place Order</button>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+    <blockquote class="py-3"> 
+        <div class="row justify-content-center"><i style="color: white;">For customized cakes you may contact Ms. Leslee De Leon at 0915 863 3222 or 
+            send a message to <a href="https://www.facebook.com/lesweetgoodies"> LeSweet Goodies & Pastries</a> on Facebook. </i>
+        </div>
+    </blockquote>
+
+</form>
+
+
+<!--footer-->
+<footer>
+	<div class="page-footer col-sm-12">
+	   <div class="container">
+		  <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+			 <div class="col-md-2 mb-3">
+				<h7><a href="index.html" style="color: #FDFD97;">Home</a></h7>
+			 </div>
+			 <div class="col-md-2 mb-3">
+				<h7><a href="AboutUs.html" style="color: #FDFD97;">About Us</a></h7>
+			 </div>
+		  </div>
+		  <hr style="margin: 0 15%;background-color:#FDFD97; opacity: .3;">
+		  <div class="row d-flex text-center justify-content-center mb-md-0 mb-4">
+		  </div>
+		  <!-- Copyright -->
+		  <div class="footer-copyright text-center py-1" style="color: #FDFD97; opacity: .8;">© 2021 LeSweet Goodies and Pastries Website by ????. All Rights Reserved</div>
+	   </div>
+	</div>
+ </footer>
+</div>
+</body>
