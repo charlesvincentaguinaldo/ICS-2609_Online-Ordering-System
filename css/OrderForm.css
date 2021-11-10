@@ -12,12 +12,15 @@
     background-color:#FF85CE;
     color:black;
     font-size: 25px;
-    padding-left:150px;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 label {
   margin-bottom: 1px;
+}
+
+.title-container{
+  background-color:#FF85CE;
 }
 
 .container {
@@ -64,8 +67,7 @@ padding-left:100px;
 }
 
 .col-3{ /* quantity */
-padding-left:10px;
-padding-right:30px;
+  padding: auto;
   -ms-flex: 1.5%; 
   flex: 1.5%;
   font-family:Georgia, 'Times New Roman', Times, serif;
@@ -83,4 +85,8 @@ padding-left:101px;
 
 .row-3 {
   padding:50px;
+}
+
+.quant {
+  width: 40px;
 }
