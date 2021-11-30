@@ -1,7 +1,6 @@
 const express = require('express');
 const mysql2 = require('mysql2');
 const morgan = require('morgan');
-const { SlimNodeMySQL } = require('slim-node-mysql');
 
 const PORT = process.env.PORT || 3000;
 const app = express();

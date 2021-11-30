@@ -7,6 +7,19 @@
     background-size: cover;
     height: 60%;
   }
+  .location{
+    color: black;
+    margin: 0;
+    padding: 0;
+    background-position: center;
+    background-size: cover;
+    height: 60%;
+  }
+
+  .bg-overlay{
+    background: rgba(0, 0, 0, 0.5);
+  }
+
   .card-text:last-child {
     text-align: center;
     margin-bottom: 0;

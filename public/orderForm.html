@@ -9,6 +9,7 @@
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <link rel="icon" href="images/head icon.png">
 	<link href="css/bootstrap-4.3.1.css" rel="stylesheet">
+    <script src="js/time.js"></script>
     <!-- jQuery and plugins --> 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script> 
@@ -44,7 +45,7 @@
         </div>
   </nav>
 <!--Order Form Starts-->
-<form action ="/details" method="POST" id="orderform" style="position: relative;">
+<form action ="/send-data" method="POST" id="orderform" style="position: relative;">
     <fieldset class="mx-4 fieldset-proper">
         <legend class="legend-center"><custom-font>Order Details</custom-font></legend>
         <div class="container-fluid p-1">
@@ -71,12 +72,12 @@
         </div>
         <div class="row justify-content-around" id="PSSC"><!--palm size smores cookies-->
             <div class= "col-5">
-                <input type="checkbox" class="ch" id="1"onclick="enableQuantity('PSSC');"/>
+                <input type="checkbox" class="ch" name="OrderNo" value="1" onclick="enableQuantity('PSSC');"/>
                 <label for = "1"> Palm Size Smores Cookies </label>
                 <i class="fa fa-cloud" style="color:royalblue;"></i><!--need icon-->
             </div>
             <div class ="col-1">
-                <input type="number" name="price" value="65.00" readonly style="border: 0; background-color:#FFF0FD;">
+                <h>&nbsp 65.00</h>
             </div>
             <div class= "col-1">
                 <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
@@ -84,12 +85,12 @@
         </div>
         <div class="row justify-content-around" id="CCCC"><!--chewy chocolate chunk cookies-->
             <div class= "col-5">
-                <input type="checkbox" class="ch" id="2" onclick="enableQuantity('CCCC');"/>
+                <input type="checkbox" class="ch" name="OrderNo" value="2" onclick="enableQuantity('CCCC');"/>
                 <label for = "2"> Chewy Chocolate Chunk Cookies (8pcs) </label>
                 <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
             </div>
             <div class ="col-1">
-                <input type="number" name="price" value="285.00" readonly style="border: 0; background-color:#FFF0FD;">
+                285.00
             </div>
             <div class= "col-1">
                 <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
@@ -108,12 +109,12 @@
         </div>
         <div class="row justify-content-around" id="RVCB"><!--Red Velvet with Creamcheese Brownies-->
             <div class= "col-5">
-                <input type="checkbox" class="ch" id="3" onclick="enableQuantity('RVCB');"/>
+                <input type="checkbox" class="ch" name="OrderNo" value="3" onclick="enableQuantity('RVCB');"/>
                 <label for = "3"> Red Velvet with Creamcheese Brownies </label>
                 <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
             </div>
             <div class ="col-1">
-                <input type="number" name="price" value="160.00" readonly style="border: 0; background-color:#FFF0FD;">
+                160.00
             </div>
             <div class= "col-1">
                 <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
@@ -121,12 +122,12 @@
         </div>
         <div class="row justify-content-around" id="ChoB"><!--Chocolate Brownies-->
             <div class= "col-5">
-                <input type="checkbox" class="ch" id="4" onclick="enableQuantity('ChoB');"/>
+                <input type="checkbox" class="ch" name="OrderNo" value="4" onclick="enableQuantity('ChoB');"/>
                 <label for = "4"> Chocolate Brownies </label>
                 <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
             </div>
             <div class ="col-1">
-                <input type="number" name="price" value="150.00" readonly style="border: 0; background-color:#FFF0FD;">
+                150.00
             </div>
             <div class= "col-1">
                 <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
@@ -134,12 +135,12 @@
         </div>
         <div class="row justify-content-around" id="CarB"><!--Caramel Brownies-->
             <div class= "col-5">
-                <input type="checkbox" class="ch" id="5" onclick="enableQuantity('CarB');"/>
+                <input type="checkbox" class="ch" name="OrderNo" value="5" onclick="enableQuantity('CarB');"/>
                 <label for = "5"> Caramel Brownies </label>
                 <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
             </div>
             <div class ="col-1">
-                <input type="number" name="price" value="150.00" readonly style="border: 0; background-color:#FFF0FD;">
+                150.00
             </div>
             <div class= "col-1">
                 <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
@@ -158,12 +159,12 @@
         </div>
         <div class="row justify-content-around" id="RVCC"><!--Red Velvet with Creamcheese cupcake (6pcs)-->
             <div class= "col-5">
-                <input type="checkbox" class="ch" id="6" onclick="enableQuantity('RVCC');"/>
+                <input type="checkbox" class="ch" name="OrderNo" value="6" onclick="enableQuantity('RVCC');"/>
                 <label for = "6"> Red Velvet with Creamcheese Cupcake (6pcs) </label>
                 <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
             </div>
             <div class ="col-1">
-                <input type="number" name="price" value="360.00" readonly style="border: 0; background-color:#FFF0FD;">
+                360.00
             </div>
             <div class= "col-1">
                 <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
@@ -171,12 +172,12 @@
         </div>
         <div class="row justify-content-around" id="ChoC"><!--Chocolate Cupcake (6pcs)-->
             <div class= "col-5">
-                <input type="checkbox" class="ch" id="7" onclick="enableQuantity('ChoC');"/>
+                <input type="checkbox" class="ch" name="OrderNo" value="7" onclick="enableQuantity('ChoC');"/>
                 <label for = "7"> Chocolate Cupcake (6pcs) </label>
                 <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
             </div>
             <div class ="col-1">
-                <input type="number" name="price" value="320.00" readonly style="border: 0; background-color:#FFF0FD;">
+                320.00
             </div>
             <div class= "col-1">
                 <input type="number" name="quantity" class="quantity" min="0" max="20" step="1" value="0" disabled>
@@ -185,15 +186,15 @@
         <h3 class="third">CAKES</h3>
         <div class="row justify-content-around" id="RVCF"><!--Red Velvet with Creamcheese Frosting-->
             <div class= "col-5">
-                <input type="checkbox" class="ch" name="RVCF" onclick="enableQuantity('RVCF');"/>
+                <input type="checkbox" class="ch" onclick="enableQuantity('RVCF');"/>
                 <label for = "RVCF"> Red Velvet with Creamcheese Frosting </label>
                 <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
             </div>
             <div class ="col-1">
-                <select id="RVCF-size" form="orderform">
+                <select id="RVCF-size" name="OrderNo">
                     <option disabled selected>Select Size</option>
-                    <option value="8">Regular Size - P850.00</option>
-                    <option value="9">Junior Size - P500.00</option>
+                    <option name="RVCF-size" value="8">Regular Size - P850.00</option>
+                    <option name="RVCF-size" value="9">Junior Size - P500.00</option>
                 </select> 
             </div>
             <div class= "col-1">
@@ -202,15 +203,15 @@
         </div>
         <div class="row justify-content-around" id="ChoCake"><!--Chocomoist Cake-->
             <div class= "col-5">
-                <input type="checkbox" class="ch" name="CCake" onclick="enableQuantity('ChoCake');"/>
+                <input type="checkbox" class="ch" onclick="enableQuantity('ChoCake');"/>
                 <label for = "CCake"> Chocomoist Cake </label>
                 <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
             </div>
             <div class ="col-1">
-                <select id="CCake-size" form="orderform">
+                <select id="CCake-size" name="OrderNo">
                     <option disabled selected>Select Size</option>
-                    <option value="10">Regular Size - P700.00</option>
-                    <option value="11">Junior Size - P400.00</option>
+                    <option name="CCake-size" value="10">Regular Size - P700.00</option>
+                    <option name="CCake-size" value="11">Junior Size - P400.00</option>
                 </select> 
             </div>
             <div class= "col-1">
@@ -219,15 +220,15 @@
         </div>
         <div class="row justify-content-around" id="UMC"><!--Ube Moist Cake with Homemade Ube Jam-->
             <div class= "col-5">
-                <input type="checkbox" class="ch" name="UMCH" onclick="enableQuantity('UMC');"/>
+                <input type="checkbox" class="ch" onclick="enableQuantity('UMC');"/>
                 <label for = "UMCH"> Ube Moist Cake with Homemade Ube Jam </label>
                 <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
             </div>
             <div class ="col-1">
-                <select id="UMCH-size" form="orderform">
+                <select id="UMCH-size" name="OrderNo">
                     <option disabled selected>Select Size</option>
-                    <option value="12">Regular Size - P650.00</option>
-                    <option value="13">Junior Size - P350.00</option>
+                    <option name="UMCH-size" value="12">Regular Size - P650.00</option>
+                    <option name="UMCH-size" value="13">Junior Size - P350.00</option>
                 </select> 
             </div>
             <div class= "col-1">
@@ -236,15 +237,15 @@
         </div>
         <div class="row justify-content-around" id="MCC"><!--Mango Cream Cake-->
             <div class= "col-5">
-                <input type="checkbox" class="ch" name="MCCake" onclick="enableQuantity('MCC');"/>
+                <input type="checkbox" class="ch" onclick="enableQuantity('MCC');"/>
                 <label for = "MCCake"> Mango Cream Cake </label>
                 <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
             </div>
             <div class ="col-1">
-                <select id="MCCake-size" form="orderform">
+                <select id="MCCake-size" name="OrderNo">
                     <option disabled selected>Select Size</option>
-                    <option value="14">Regular Size - P650.00</option>
-                    <option value="15">Junior Size - P350.00</option>
+                    <option name="MCCake-size" value="14">Regular Size - P650.00</option>
+                    <option name="MCCake-size" value="15">Junior Size - P350.00</option>
                 </select> 
             </div>
             <div class= "col-1">
@@ -254,15 +255,15 @@
         <h3 class="third">CHEESECAKES</h3>
         <div class="row justify-content-around" id="BC"><!--Blueberry Cheesecake-->
             <div class= "col-5">
-                <input type="checkbox" class="ch" name="BCCake" onclick="enableQuantity('BC');"/>
+                <input type="checkbox" class="ch" onclick="enableQuantity('BC');"/>
                 <label for = "BCCake"> Blueberry Cheesecake </label>
                 <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
             </div>
             <div class ="col-1">
-                <select id="BCCake-size" form="orderform">
+                <select id="BCCake-size" name="OrderNo">
                     <option disabled selected>Select Size</option>
-                    <option value="16">Regular Size - P850.00</option>
-                    <option value="17">Junior Size - P500.00</option>
+                    <option name="BCCake-size" value="16">Regular Size - P850.00</option>
+                    <option name="BCCake-size"  value="17">Junior Size - P500.00</option>
                 </select> 
             </div>
             <div class= "col-1">
@@ -271,15 +272,15 @@
         </div>
         <div class="row justify-content-around" id="OC"><!--Oreo Cheesecake-->
             <div class= "col-5">
-                <input type="checkbox" class="ch" name="OCCake" onclick="enableQuantity('OC');"/>
+                <input type="checkbox" class="ch" onclick="enableQuantity('OC');"/>
                 <label for = "OCCake"> Oreo Cheesecake </label>
                 <i class="fa fa-cloud" style="color:red;"></i><!--need icon-->
             </div>
             <div class ="col-1">
-                <select id="OCCake-size" form="orderform">
+                <select id="OCCake-size" name="OrderNo">
                     <option disabled selected>Select Size</option>
-                    <option value="18">Regular Size - P850.00</option>
-                    <option value="19">Junior Size - P500.00</option>
+                    <option name="OCCake-size" value="18">Regular Size - P850.00</option>
+                    <option name="OCCake-size"  value="19">Junior Size - P500.00</option>
                 </select> 
             </div>
             <div class= "col-1">
@@ -303,13 +304,13 @@
                     <label for="Contact Number"> 
                          Contact Number:
                     </label>
-                    <input type="text" name="Contact-No" id="contactNum" placeholder="0912345678" minlength=11 required>
+                    <input type="text" name="Contact" id="contactNum" placeholder="0912345678" minlength="11" maxlength="11" required>
                 </div>
                 <div class="col- px-3">
-                    <label for="Email Address"> 
+                    <label for="emailAdd"> 
                         Email Address:
-                    <input type="text" name ="email "id="emailAdd" placeholder="customer@gmail.com" required>
-                    </label>
+                        </label>
+                    <input type="text" name ="emailAdd" id="emailAdd" placeholder="customer@gmail.com" required>
                 </div>
             </div>
             <div class="row justify-content-center">
@@ -331,7 +332,7 @@
                 <div class="col- px-3">
                     <label>
                         Delivery Option:
-                        <select id="delopt" required>
+                        <select id="delivery" name="delivery"required>
                             <option>Delivery</option>
                             <option>Pick-up</o<ption>    
                         </select>
@@ -340,21 +341,17 @@
                 <div class="col- px-3">
                     <label>
                         Mode of Payment:
-                        <select id="payment" required>
-                             <option>Cash on Delivery</option>
-                             <option>G-Cash</o<ption>
-                             <option>Bank Transfer</option>
+                        <select id="payment" name="payment" required>
+                             <option value="COD">Cash on Delivery</option>
+                             <option value="G-Cash">G-Cash</o<ption>
+                             <option value="Bank">Bank Transfer</option>
                          </select>
                     </label>
                 </div>
                 <div class="col- px-3">
                     <label>
                         Time:
-                        <input type="time" name= "date"
-                                    autocomplete="off"
-                                    min="00:00"
-                                    max="00:00"
-                                    required>
+                        <input type="time" name="time" min="07:00" max="22:00" pattern required>
                     </label>
                 </div>
             </div>

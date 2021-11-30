@@ -5,29 +5,28 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>LeSweet ADMIN</title>
-	<link rel="icon" href="../public/images/head icon.png">
-    <link href="../public/css/bootstrap-4.3.1.css" rel="stylesheet">
-    <link href="../public/css/main.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="../admin-images/icon.png">
+    <link href="../admin-css/bootstrap-4.3.1.css" rel="stylesheet">
+    <link href="../admin-css/adminMain.css" rel="stylesheet" type="text/css">
     <!-- jQuery and plugins --> 
-    <script src="../public/js/jquery-3.3.1.min.js"></script>
-    <script src="../public/js/popper.min.js"></script> 
-    <script src="../public/js/bootstrap-4.3.1.js"></script>
+    <script src="../admin-js/jquery-3.3.1.min.js"></script>
+    <script src="../admin-js/bootstrap-4.3.1.js"></script> 
+    <script src="../admin-js/popper.min.js"></script>
   </head>
-<body style="padding-top: 30px; background-color: #FFF0FD;">
-    <div class="login">
-        <h1 class="text-center">Login</h1>
-        <br><br>
-        <br><br>
-            <form action="" method="POST" class="text-center">
-            Username: <br>
-            <input type="text" name="username" placeholder="Enter Username"><br><br>
-
-            Password: <br>
-            <input type="password" name="password" placeholder="Enter Password"><br><br>
-
-            <input type="submit" name="submit" value="Login" class="btn-primary">
-            <br><br>
-            </form>
+<body style="padding-top: 10rem; background-color: #FFF0FD;">
+    <div class="container shadow" style="background-color: white; border-radius: 20px;">
+      <h1 class="text-center pt-4 pb-4">LESWEET ADMIN</h1>
+        <form action="/admin/login" method="POST">
+          <div class="row justify-content-center py-3">
+            <input type="text" id="username" name="username" placeholder="Username">
+          </div>
+          <div class="row justify-content-center py-3">
+            <input type="text" id="password" name="password" placeholder="Password">
+          </div>
+          <div class="row justify-content-center py-2 pb-3">
+            <button type="submit" class="btn btn-primary" onclick=userValidate()>Log In</button>
+          </div>
+        </form>
     </div>
 
 
