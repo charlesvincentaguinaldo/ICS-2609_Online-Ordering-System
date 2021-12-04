@@ -18,19 +18,6 @@
     margin-left: 0;
   }
   
-  
-  .carousel-control-prev-icon {
-    width: 15%;
-    height: 6%;
-    transform: scaleX(-1);
-  }
-  
-  .carousel-control-next-icon {
-    width: 15%;
-    height: 6%;
-  }
-  
-
   .mx-6{
     margin-left: 5rem;
     margin-right: 5rem;
@@ -45,52 +32,26 @@
   
   h1{
     font-family: "Lucida Console";
-    color: purple;
   }
 
-  .card-img {
-    opacity: .6;
-    width: 100%;
-    border-radius: calc(0.25rem - 1px);
+  .navbar-dark .navbar-nav .show > 
+  .nav-link, .navbar-dark .navbar-nav .active > 
+  .nav-link, .navbar-dark .navbar-nav .nav-link.show,
+  .navbar-dark .navbar-nav .nav-link.active {
+    color: #fff;text-decoration: underline;
   }
-
-  .card:hover .card-img {
-    transition: 0.4s ease;
-    opacity: 0.2;
-  }
-
-  a .card-title{
+  .navbar-dark .navbar-nav .show > 
+  .nav-link, .navbar-dark .navbar-nav .nav-item:hover{
     color: white;
-    text-align: center;
-    padding-top: 2rem;
-    }
-
-  a .card-text{
-    color: white;
-    text-align: center;
-    padding-top: 2rem;
-  }
-
-  .nav{
-    border-bottom-style: solid;
-  }
-
-  .nav a:hover {
-    text-decoration: none;
-  }
-
-  h5{
-    color: purple;
-  }
-  .nav a:hover h5 {
-    color: black;
     text-decoration: underline;
     text-decoration-style:solid;
-    text-decoration-thickness: 0.5px;
   }
 
-
-  
+  .table .thead-color th {
+    color: #000000;
+    background-color: #ffa4f3;
+    border-color: #dee2e6;
+  }
 
 
 
